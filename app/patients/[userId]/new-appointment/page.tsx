@@ -7,7 +7,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
   const patient = await getPatient(userId);
 
   return (
-    <div className="flex h-screen max-h-screen">
+    <div className="flex h-screen max-h-screen flex-col"> 
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[860px] flex-1 justify-between">
           <Image
@@ -16,7 +16,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
             width={1000}
             alt="logo"
             className="mb-12 h-10 w-fit"
-          />
+          />  
 
           <AppointmentForm
             patientId={patient?.$id}

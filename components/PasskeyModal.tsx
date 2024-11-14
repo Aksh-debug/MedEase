@@ -36,6 +36,7 @@ export const PasskeyModal = () => {
     const accessKey = encryptedKey && decryptKey(encryptedKey);
 
     if (path)
+      console.log(process.env.NEXT_PUBLIC_ADMIN_PASSKEY)
       if (accessKey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY!.toString()) {
         setOpen(false);
         router.push("/admin");
@@ -108,7 +109,7 @@ export const PasskeyModal = () => {
         </div>
         <AlertDialogFooter>
           <AlertDialogAction
-            onClick={(e) => validatePasskey(e)}
+            onClick={(e:any) => validatePasskey(e)}
             className="shad-primary-btn w-full"
           >
             Enter Admin Passkey
