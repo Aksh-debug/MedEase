@@ -25,7 +25,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
 
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="text-dark-600 justify-items-end xl:text-left">
-              © 2024 MedEase
+              © 2024 Care Pulse
             </p>
             <Link href="/?admin=true" className="text-green-500">
               Admin
